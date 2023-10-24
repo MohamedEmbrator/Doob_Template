@@ -95,3 +95,29 @@ const copyRights = document.querySelector(
   "footer p:last-of-type span:first-of-type"
 );
 copyRights.innerHTML = new Date().getFullYear();
+
+
+const facebook = document.querySelector("footer .social-icons i:first-child");
+const linkedIn = document.querySelector("footer .social-icons i:nth-child(2)");
+const instagram = document.querySelector("footer .social-icons i:nth-child(3)");
+facebook.addEventListener("click", function () {
+  window.open(
+    "https://www.facebook.com/profile.php?id=100045981390071",
+    "_blank",
+    ""
+  );
+});
+linkedIn.addEventListener("click", function () {
+  window.open(
+    "https://www.linkedin.com/in/mohamed-e-00b641274/",
+    "_blank",
+    ""
+  );
+});
+instagram.addEventListener("click", function () {
+  window.open(
+    "https://www.instagram.com/embratorm/",
+    "_blank",
+    ""
+  );
+});
