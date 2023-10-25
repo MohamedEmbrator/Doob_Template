@@ -428,6 +428,18 @@ header .container .lang-and-contact > a:hover {
     font-size: 25px !important;
   }
 }
+@media (max-width: 385px) {
+  .landing .container .text > .get-in-touch {
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .landing .container .text > .get-in-touch > a {
+    text-align: center;
+    width: 100%;
+  }
+}
 /* End Landing  */
 /* Start Services  */
 .services {
