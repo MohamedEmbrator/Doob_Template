@@ -1,5 +1,8 @@
 const btn = document.querySelector(".btn");
 const navigationBar = document.querySelector("header .container > nav");
+const scrollProgress = document.querySelector(".scroll-height");
+
+const totalHeight = document.body.scrollHeight - window.innerHeight;
 btn.addEventListener("click", function () {
   navigationBar.classList.toggle("show");
 });
@@ -14,6 +17,8 @@ window.onscroll = function () {
   } else {
     scrollButton.style.display = "none";
   }
+  const progressHeight = (window.pageYOffset / totalHeight) * 100;
+  scrollProgress.style.width = `${progressHeight}%`;
 };
 scrollButton.addEventListener("click", function () {
   window.scrollTo({
@@ -96,7 +101,6 @@ const copyRights = document.querySelector(
 );
 copyRights.innerHTML = new Date().getFullYear();
 
-
 const facebook = document.querySelector("footer .social-icons i:first-child");
 const linkedIn = document.querySelector("footer .social-icons i:nth-child(2)");
 const instagram = document.querySelector("footer .social-icons i:nth-child(3)");
@@ -108,16 +112,8 @@ facebook.addEventListener("click", function () {
   );
 });
 linkedIn.addEventListener("click", function () {
-  window.open(
-    "https://www.linkedin.com/in/mohamed-e-00b641274/",
-    "_blank",
-    ""
-  );
+  window.open("https://www.linkedin.com/in/mohamed-e-00b641274/", "_blank", "");
 });
 instagram.addEventListener("click", function () {
-  window.open(
-    "https://www.instagram.com/embratorm/",
-    "_blank",
-    ""
-  );
+  window.open("https://www.instagram.com/embratorm/", "_blank", "");
 });
